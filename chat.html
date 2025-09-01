@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LipZx Ai - Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="neo.css">
+</head>
+<body class="chat-page-body">
+
+    <header class="header">
+        <a href="index.html" class="logo">Chat Ai</a>
+        <button id="menu-btn" class="menu-btn">☰</button>
+    </header>
+
+    <nav id="nav-menu" class="nav-menu">
+        <button id="close-btn" class="close-btn">×</button>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="chat.html">Chat AI</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <main class="chat-main">
+        <section class="chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title-container">
+                        <h1 class="chat-title">LipZx Ai</h1>
+                        <button id="reset-chat-btn" class="reset-chat-btn card"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div class="chat-header-info">
+                         <div id="model-selector" class="model-selector">
+                            <button id="model-selector-btn" class="model-selector-btn card">
+                                <span id="current-model-name">BlackBox AI</span> <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div id="model-list" class="model-list card">
+                                <div class="model-item" data-model="blackbox">BlackBox AI</div>
+                                <div class="model-item" data-model="deepseek">DeepSeek LLM 67b</div>
+                                <div class="model-item" data-model="luminai">Luminai</div>
+                                <div class="model-item" data-model="llama">Llama</div>
+                                <div class="model-item" data-model="llama33">Llama 33</div>
+                                <div class="model-item" data-model="mistral">Mistral</div>
+                                <div class="model-item" data-model="qwq">QwQ 32b Preview</div>
+                                <div class="model-item" data-model="perplexity">Perplexity</div>
+                                <div class="model-item" data-model="gpt3">GPT-3</div>
+                                <div class="model-item" data-model="gpt4">GPT-4</div>
+                            </div>
+                        </div>
+                        <div id="realtime-clock" class="realtime-clock-chat"></div>
+                    </div>
+                </div>
+                <div id="chat-window" class="chat-window">
+                </div>
+                <div class="chat-input-area">
+                    <form id="chat-form" class="chat-form">
+                        <input type="text" id="chat-input" class="chat-input card" placeholder="Ask me anything..." autocomplete="off">
+                        <button type="submit" class="chat-send-btn card">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="custom-confirm-modal" class="custom-modal-overlay is-hidden">
+        <div class="custom-modal card">
+            <h3>Clear Chat History?</h3>
+            <p>Are you sure you want to clear the entire chat history? This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button id="modal-cancel-btn" class="btn btn-secondary card">Cancel</button>
+                <button id="modal-confirm-btn" class="btn btn-primary card">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="neo.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
