@@ -1,2 +1,0 @@
-# protofolio-neo
-proto
